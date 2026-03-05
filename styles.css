@@ -171,6 +171,47 @@ article {
 
 }
 
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  background-color: #fdfdfd;
+  padding: 14px;
+  border-radius: var(--radius);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.task-form input,
+.task-form select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-family: inherit;
+}
+
+.task-form button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-btn {
+  margin-left: 10px;
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  color: #ef4444;
+}
+
 @media (max-width: 768px) {
 
   main{

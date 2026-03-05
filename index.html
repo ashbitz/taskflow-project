@@ -33,28 +33,50 @@
       </aside>
 
       <section>
-        <article>
-          <span class="titulo">Proyecto HTML</span>
-          <span class="categoria">Trabajo</span>
-          <span class="badge alta">Alta</span>
-        </article>
-        <article>
-          <span class="titulo">Proyecto CSS</span>
-          <span class="categoria">Trabajo</span>
-          <span class="badge alta">Alta</span>
-        </article>
+        <form id="task-form" class="task-form">
+          <input type="text" id="task-input" placeholder="Tarea" required />
 
-        <article>
-          <span class="titulo">Examen</span>
-          <span class="categoria">Estudios</span>
-          <span class="badge media">Media</span>
-        </article>
-        <article>
-          <span class="titulo">Proyecto Ocio</span>
-          <span class="categoria">Personal</span>
-          <span class="badge baja">Baja</span>
-        </article>
+          <input
+            type="text"
+            id="category-input"
+            placeholder="Categoría"
+            required
+          />
+
+          <select id="priority-input">
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+
+          <button type="submit">Añadir</button>
+        </form>
+
+        <div id="task-list">
+          <article>
+            <span class="titulo">Proyecto HTML</span>
+            <span class="categoria">Trabajo</span>
+            <span class="badge alta">Alta</span>
+          </article>
+          <article>
+            <span class="titulo">Proyecto CSS</span>
+            <span class="categoria">Trabajo</span>
+            <span class="badge alta">Alta</span>
+          </article>
+
+          <article>
+            <span class="titulo">Examen</span>
+            <span class="categoria">Estudios</span>
+            <span class="badge media">Media</span>
+          </article>
+          <article>
+            <span class="titulo">Ocio</span>
+            <span class="categoria">Personal</span>
+            <span class="badge baja">Baja</span>
+          </article>
+        </div>
       </section>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
