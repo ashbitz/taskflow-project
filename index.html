@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TaskFlow Project</title>
+    <link rel="stylesheet" href="output.css" />
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
@@ -11,16 +12,22 @@
     />
   </head>
 
-  <body>
-    <header>
-      <h1>
-        <img src="icon.png" alt="logo" class="logo-icon" />
-        Task<span class="flow">Flow</span>
+  <body
+    class="min-h-screen bg-gradient-to-br from-indigo-50 via-blue-100 to-indigo-200 text-slate-900 font-sans"
+  >
+    <header
+      class="max-w-[1500px] mx-auto mt-5 px-12 py-5 bg-white border border-gray-200 rounded-xl shadow-lg flex items-center gap-3 text-3xl font-bold"
+    >
+      <h1 class="flex items-center">
+        <img src="icon.png" alt="logo" class="w-9 h-9 mr-2" />
+        Task<span class="text-indigo-500">Flow</span>
       </h1>
     </header>
 
-    <main>
-      <aside>
+    <main class="max-w-[1500px] mx-auto flex gap-3 mt-5">
+      <aside
+        class="w-64 bg-white border border-gray-200 rounded-xl shadow-lg p-5"
+      >
         <h3>Menú</h3>
         <nav>
           <ul>
@@ -32,49 +39,47 @@
         </nav>
       </aside>
 
-      <section>
-        <form id="task-form" class="task-form">
-          <input type="text" id="task-input" placeholder="Tarea" required />
+      <section
+        class="flex-1 bg-white border border-gray-200 rounded-xl shadow-lg p-5 flex flex-col gap-3"
+      >
+        <form
+          id="task-form"
+          class="bg-white border border-gray-200 rounded-xl shadow-lg p-4 flex flex-wrap gap-3"
+        >
+          <input
+            class="flex-1 min-w-[220px] rounded-lg border border-gray-300 px-3 py-2 outline-none focus:ring-2 focus:ring-indigo-400"
+            type="text"
+            id="task-input"
+            placeholder="Tarea"
+            required
+          />
 
           <input
+            class="flex-1 min-w-[180px] rounded-lg border border-gray-300 px-3 py-2 outline-none focus:ring-2 focus:ring-indigo-400"
             type="text"
             id="category-input"
             placeholder="Categoría"
             required
           />
 
-          <select id="priority-input">
+          <select
+            id="priority-input"
+            class="w-36 rounded-lg border border-gray-300 px-3 py-2 outline-none focus:ring-2 focus:ring-indigo-400"
+          >
             <option value="alta">Alta</option>
             <option value="media">Media</option>
             <option value="baja">Baja</option>
           </select>
 
-          <button type="submit">Añadir</button>
+          <button
+            type="submit"
+            class="rounded-lg bg-indigo-500 px-4 py-2 font-semibold text-white hover:bg-indigo-600 transition"
+          >
+            Añadir
+          </button>
         </form>
 
-        <div id="task-list">
-          <article>
-            <span class="titulo">Proyecto HTML</span>
-            <span class="categoria">Trabajo</span>
-            <span class="badge alta">Alta</span>
-          </article>
-          <article>
-            <span class="titulo">Proyecto CSS</span>
-            <span class="categoria">Trabajo</span>
-            <span class="badge alta">Alta</span>
-          </article>
-
-          <article>
-            <span class="titulo">Examen</span>
-            <span class="categoria">Estudios</span>
-            <span class="badge media">Media</span>
-          </article>
-          <article>
-            <span class="titulo">Ocio</span>
-            <span class="categoria">Personal</span>
-            <span class="badge baja">Baja</span>
-          </article>
-        </div>
+        <div id="task-list"></div>
       </section>
     </main>
     <script src="app.js"></script>
