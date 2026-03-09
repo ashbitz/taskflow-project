@@ -3,8 +3,26 @@ const taskInput = document.querySelector("#task-input");
 const categoryInput = document.querySelector("#category-input");
 const priorityInput = document.querySelector("#priority-input");
 const taskList = document.querySelector("#task-list");
+const themeToggle = document.querySelector("#theme-toggle");
 
 let tasks = [];
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+  document.body.classList.add("dark");
+  themeToggle.textContent = "☀️";
+} else {
+  themeToggle.textContent = "🌑";
+}
+
+themeToggle.addEventListener("click", () => {
+  const isDark = document.body.classList.toggle("dark");
+
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+
+  themeToggle.textContent = isDark ? "☀️" : "🌑";
+});
 
 // Cargar tasks
 const savedTasks = localStorage.getItem("tasks");
@@ -24,7 +42,7 @@ function addTaskToDOM(task) {
 
   const article = document.createElement("article");
 article.className =
-  "flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-3 py-2 shadow-sm";
+  "flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700 px-3 py-2 shadow-sm";
 
 const checkbox = document.createElement("input");
 checkbox.type = "checkbox";
@@ -38,11 +56,11 @@ checkbox.addEventListener("change", () => {
 });
 
   const title = document.createElement("span");
-  title.className = "font-medium text-slate-900";
+  title.className = "font-medium text-slate-900 dark:text-slate-100";
   title.textContent = task.title;
 
   const category = document.createElement("span");
-  category.className = "text-sm text-slate-500";
+  category.className = "text-sm text-slate-500 dark:text-slate-300";
   category.textContent = task.category;
 
 const badge = document.createElement("span");
@@ -71,14 +89,14 @@ badge.textContent =
   function updateTaskStyle() {
   if (task.completed) {
     article.className =
-      "flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-slate-100 px-3 py-2 shadow-sm opacity-70";
-    title.className = "font-medium text-slate-500 line-through";
-    category.className = "text-sm text-slate-400 line-through";
+  "flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-slate-100 dark:bg-slate-700 dark:border-slate-600 px-3 py-2 shadow-sm opacity-70";
+    title.className = "font-medium text-slate-500 dark:text-slate-400 line-through";
+    category.className = "text-sm text-slate-400 dark:text-slate-500 line-through";
   } else {
     article.className =
-      "flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-3 py-2 shadow-sm";
-    title.className = "font-medium text-slate-900";
-    category.className = "text-sm text-slate-500";
+  "flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700 px-3 py-2 shadow-sm";
+    title.className = "font-medium text-slate-900 dark:text-slate-100";
+category.className = "text-sm text-slate-500 dark:text-slate-300";
   }
 }
 
