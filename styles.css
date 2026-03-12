@@ -1,3 +1,4 @@
+/*
 :root {
   --font: 'Inter', system-ui, sans-serif;
   --color-text: #232425;
@@ -22,10 +23,10 @@
 
 body {
   min-height: 100vh;
-  /* background: var(--color-bg); */
   color: var(--color-text);
   font-family: var(--font);
 }
+*/
 
 /* header {
   color: var(--color-text-header);
@@ -100,7 +101,7 @@ aside li {
   gap: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 } */
-
+/*
 section article {
   margin-bottom: 12px;
 }
@@ -108,7 +109,7 @@ section article {
 section article:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-}
+} */
 
 /* article {
   display: flex;
@@ -194,7 +195,7 @@ section article:hover {
   color: white;
   cursor: pointer;
 } */
-
+/*
 .delete-btn {
   margin-left: 10px;
   border: none;
@@ -206,7 +207,7 @@ section article:hover {
 
 .delete-btn:hover {
   color: #ef4444;
-}
+} */
 
 @media (max-width: 768px) {
 

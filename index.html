@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TaskFlow Project</title>
     <link rel="stylesheet" href="output.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <!--<link rel="stylesheet" href="styles.css" />-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Zen+Dots&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -41,22 +43,37 @@
         <nav>
           <ul class="mb-2 flex flex-col gap-2 text-slate-900">
             <li>
-              <a class="text-slate-900 dark:text-slate-100" href="#">
+              <a
+                id="nav-home"
+                class="aside-link inline-flex items-center rounded-lg px-2 py-1 transition-colors text-slate-900 dark:text-slate-100 hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-700 dark:hover:text-slate-100"
+                href="#"
+              >
+                🟣 Inicio
+              </a>
+            </li>
+            <li>
+              <a
+                id="nav-open-tasks"
+                class="aside-link inline-flex items-center rounded-lg px-2 py-1 transition-colors text-slate-900 dark:text-slate-100 hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-700 dark:hover:text-slate-100"
+                href="#"
+              >
                 ☑️ Tareas Abiertas
               </a>
             </li>
             <li>
-              <a class="text-slate-900 dark:text-slate-100" href="#">
+              <a
+                id="nav-closed-tasks"
+                class="aside-link inline-flex items-center rounded-lg px-2 py-1 transition-colors text-slate-900 dark:text-slate-100 hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-700 dark:hover:text-slate-100"
+                href="#"
+              >
                 ✖️ Tareas Cerradas
               </a>
             </li>
             <li>
-              <a class="text-slate-900 dark:text-slate-100" href="#">
-                🟣 Estadísticas
-              </a>
-            </li>
-            <li>
-              <a class="text-slate-900 dark:text-slate-100" href="#">
+              <a
+                class="aside-link inline-flex items-center rounded-lg px-2 py-1 transition-colors text-slate-900 dark:text-slate-100 hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-700 dark:hover:text-slate-100"
+                href="#"
+              >
                 ✉️ Contacto
               </a>
             </li>
