@@ -209,7 +209,7 @@ section article:hover {
   color: #ef4444;
 } */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
   main{
     flex-direction: column;
@@ -235,4 +235,4 @@ section article:hover {
     justify-content: center;
     flex-wrap: wrap;
   }
-}
+} */

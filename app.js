@@ -268,10 +268,10 @@ function validateTaskInput(title, category) {
     };
   }
 
-  if (normalizedTitle.length > 60) {
+  if (normalizedTitle.length > 20) {
     return {
       isValid: false,
-      error: "El titulo no puede superar los 60 caracteres."
+      error: "El titulo no puede superar los 20 caracteres."
     };
   }
 
@@ -282,17 +282,17 @@ function validateTaskInput(title, category) {
     };
   }
 
-  if (normalizedCategory.length < 2) {
+  if (normalizedCategory.length < 3) {
     return {
       isValid: false,
-      error: "La categoria debe tener al menos 2 caracteres."
+      error: "La categoria debe tener al menos 3 caracteres."
     };
   }
 
-  if (normalizedCategory.length > 30) {
+  if (normalizedCategory.length > 10) {
     return {
       isValid: false,
-      error: "La categoria no puede superar los 30 caracteres."
+      error: "La categoria no puede superar los 10 caracteres."
     };
   }
 
@@ -347,7 +347,7 @@ function createTaskElement(task) {
   deleteBtn.type = "button";
   deleteBtn.textContent = "\u00D7";
   deleteBtn.className =
-    "ml-2 cursor-pointer border-0 bg-transparent text-sm text-gray-400 transition-colors hover:text-red-500";
+    "ml-2 cursor-pointer border-0 bg-transparent text-lg font-bold text-gray-400 transition-colors hover:text-red-500";
   deleteBtn.setAttribute("aria-label", `Eliminar tarea ${task.title}`);
 
   article.append(checkbox, title, category, badge, deleteBtn);
